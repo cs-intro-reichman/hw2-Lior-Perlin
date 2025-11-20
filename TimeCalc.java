@@ -6,11 +6,9 @@ public class TimeCalc {
             System.out.println("Invalid Time");
         }
         else {
-            int curHours, curMinutes, addHours, addMinutes;
+            int curHours, curMinutes;
             curHours = Integer.parseInt(curTime.substring(0, 2));
             curMinutes = Integer.parseInt(curTime.substring(3, 5));
-            // addHours = (minutesToAdd / 60) % 23;
-            // addMinutes = minutesToAdd % 60;
             curMinutes = curMinutes + (minutesToAdd % 60);
             curHours += (minutesToAdd / 60);
             if(curMinutes >= 60) {
