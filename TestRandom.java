@@ -6,7 +6,6 @@ public  class  TestRandom {
 			System.out.println("N is has to be a non-negative integer");
 		}
 		double current;
-		int random;
 		int countHigh = 0, countLow = 0;
 		for(int i = 0; i < n; i++) {
 			current = Math.random();
