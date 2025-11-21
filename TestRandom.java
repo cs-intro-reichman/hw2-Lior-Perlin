@@ -2,29 +2,31 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    int n = Integer.parseInt(args[0]);
-		if(n <= 0) {
+		if(n <= 0) { // Checking the inputs are according to the requirments
 			System.out.println("N is has to be a non-negative integer");
 		}
-		double current;
-		int countHigh = 0, countLow = 0;
-		for(int i = 0; i < n; i++) {
-			current = Math.random();
-			if(current >= 0.5) {
-				countHigh++;
+		else {
+			double current;
+			int countHigh = 0, countLow = 0;
+			for(int i = 0; i < n; i++) { // Enter loop and generate n amount of random numbers as requested
+				current = Math.random(); // Generate a random number
+				if(current >= 0.5) { // If it's Bigger or is exacly 0.5
+					countHigh++;
+				}
+				else { // If it's Smaller than 0.5
+					countLow++;
+				}
+			}
+			double ratio;
+			if (countHigh > countLow) { // Calculated the ratio according the the lower count
+				ratio = (double)countLow/countHigh;
 			}
 			else {
-				countLow++;
+				ratio = (double)countHigh/countLow;
 			}
+			System.out.println("> 0.5: " + countLow + " times");
+			System.out.println("<= 0.5: " + countHigh + " times");
+			if(ratio != 0) System.out.println("Ratio: " + ratio); // If ratio is to low
 		}
-		double ratio;
-		if (countHigh > countLow) {
-			ratio = (double)countLow/countHigh;
-		}
-		else {
-			ratio = (double)countHigh/countLow;
-		}
-		System.out.println("> 0.5: " + countLow + " times");
-		System.out.println("<= 0.5: " + countHigh + " times");
-		if(ratio != 0) System.out.println("Ratio: " + ratio);
 	}
 }

@@ -3,7 +3,7 @@ public class Collatz {
 	public static void main(String args[]) {
 	    int N = Integer.parseInt(args[0]);
 		char type = args[1].charAt(0);
-		if(N <= 0 && type != 'v' && type != 'c')  { // Making sure all inputs are correct
+		if(N <= 0 && type != 'v' && type != 'c')  { // Checking the inputs are according to the requirments
         		System.out.println("Give me a solid non-negative integer and either “v” (verbose) or “c” (concise) ");
         }
 		else {
@@ -14,13 +14,13 @@ public class Collatz {
 			{
 				counter = 0; // Zeroing all variables to sure all are refreshed for new hailstone
 				currNum = i;
-				line = currNum + " ";
+				line = currNum + " "; // Resets line
 				do { // Second loop to go though all steps
 					// Checking if its even or odd number
-					if(currNum % 2 == 0) { //even
+					if(currNum % 2 == 0) { // Even number
 						currNum /= 2;
 					}
-					else { // Odd
+					else { // Odd number
 						currNum *= 3;
 						currNum++;
 					}
