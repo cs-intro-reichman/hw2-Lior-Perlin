@@ -20,8 +20,8 @@ public class CalcPi {
 				denominator += 2; // Jumping the denominator to the next step
 			}
 			sum *= 4; // Another part of the equation
-			System.out.println("pi according to Java:	" + Math.PI);
-			System.out.println("pi, approximated:	" + sum);
+			System.out.println("pi according to Java: " + Math.PI);
+			System.out.println("pi, approximated: " + sum);
 		}
 	}
 }
