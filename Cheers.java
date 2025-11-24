@@ -3,7 +3,7 @@ public class Cheers {
         public static void main(String[] args) {
 	    String cheering = args[0];
             int amountOfCheers = Integer.parseInt(args[1]);
-            if(amountOfCheers <= 0 || cheering.length() == 0)  { // Checking the inputs are according to the requirments
+            if(amountOfCheers < 0 || cheering.length() == 0)  { // Checking the inputs are according to the requirments
                 System.out.println("Give me a solid string and a non-negative integer");
             }
             else {
