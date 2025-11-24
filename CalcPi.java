@@ -9,7 +9,7 @@ public class CalcPi {
 			double sum = 1.0;
 			int denominator = 3; // The denominator of every step
 			double temp;
-			for(int i = 0; i < amount; i++) { // Entering a loop does the equation the amount requested
+			for(int i = 0; i < amount-1; i++) { // Entering a loop does the equation the amount requested
 				if(i % 2 == 0) { // If we are at an even step, the equation should be subtraction
 					temp = (-1.0) / denominator;
 				}
