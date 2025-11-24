@@ -12,7 +12,7 @@ public class Collatz {
 			int currNum; // Number to manipulate
 			for(int i = 1; i <= N; i++) // First loop in order to go through every seed
 			{
-				counter = 0; // Zeroing all variables to sure all are refreshed for new hailstone
+				counter = 1; // Zeroing all variables to sure all are refreshed for new hailstone
 				currNum = i;
 				line = currNum + " "; // Resets line
 				do { // Second loop to go though all steps
@@ -37,3 +37,27 @@ public class Collatz {
 		}
 	}
 }
+
+// 1 4 2 1 (4)
+// 2 1 (2)
+// 3 10 5 16 8 4 2 1 (8)
+// 4 2 1 (3)
+// 5 16 8 4 2 1 (6)
+// 6 3 10 5 16 8 4 2 1 (9)
+// 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 (17)
+// 8 4 2 1 (4)
+// 9 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 (20)
+// 10 5 16 8 4 2 1 (7)
+// Every one of the first 10 hailstone sequences reached 1.
+
+// 1 4 2 1 (3)
+// 2 1 (1)
+// 3 10 5 16 8 4 2 1 (7)
+// 4 2 1 (2)
+// 5 16 8 4 2 1 (5)
+// 6 3 10 5 16 8 4 2 1 (8)
+// 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 (16)
+// 8 4 2 1 (3)
+// 9 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 (19)
+// 10 5 16 8 4 2 1 (6)
+// Every one of the first 10 hailstone sequences reached 1.
